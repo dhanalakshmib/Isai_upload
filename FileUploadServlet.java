@@ -107,11 +107,12 @@ public class FileUploadServlet extends HttpServlet {
                         String fileName = new File(item.getName()).getName();
                         String filePath = uploadDir + File.separator + fileName;
                         File storeFile = new File(filePath);
- System.out.println("File name "+fileName+"Fie Path"+filePath+"Store file is"+storeFile);
+ 
                         // saves the file on disk
                         item.write(storeFile);
                         request.setAttribute("message",
-                            "Upload has been done successfully!");     
+                            "Upload has been done successfully!");   
+                            break;
                     }
                 
                 String name=item.getFieldName();
